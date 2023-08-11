@@ -66,6 +66,7 @@
   }
 }
 .contact-page .contact-info iframe {
+  width: 100%;
   height: 300px;
   flex-grow: 2;
 }

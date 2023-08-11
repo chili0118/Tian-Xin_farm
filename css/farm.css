@@ -75,6 +75,7 @@
     display: flex;
     width: 100%;
     justify-content: space-between;
+    flex-wrap: wrap;
   }
 }
 .farm-area .farm-page li {
@@ -86,6 +87,9 @@
 @media (max-width: 767px) {
   .farm-area .farm-page li {
     font-size: 1rem;
+    width: 50%;
+    outline: 1px solid #519328;
+    margin-bottom: 0;
   }
 }
 .farm-area .farm-page li:hover a {
@@ -96,12 +100,6 @@
   display: block;
   transition: 0.3s all;
   padding: 8px;
-}
-@media (max-width: 767px) {
-  .farm-area .farm-page a {
-    writing-mode: vertical-lr;
-    letter-spacing: 5px;
-  }
 }
 .farm-area .farm-content {
   display: flex;
@@ -122,6 +120,11 @@
   -o-object-fit: cover;
      object-fit: cover;
 }
+@media (max-width: 767px) {
+  .farm-area .farm-content img {
+    height: 350px;
+  }
+}
 .farm-area .farm-content p {
   margin-top: 20px;
   letter-spacing: 1px;
@@ -133,12 +136,10 @@
 }
 .farm-active::before {
   content: url("../img/auto_awesome_white_24dp.svg");
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  vertical-align: text-top;
   vertical-align: middle;
   margin-right: 8px;
-}
-@media (max-width: 767px) {
-  .farm-active::before {
-    margin-right: 0;
-    margin-bottom: 4px;
-  }
 }/*# sourceMappingURL=farm.css.map */
