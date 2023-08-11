@@ -134,7 +134,7 @@ header {
     align-items: center;
     justify-content: center;
     right: 0;
-    bottom: 30%;
+    bottom: 15%;
     padding: 30px;
     background: #82c956;
     border-radius: 30px 0 0 30px;
@@ -151,6 +151,12 @@ header {
         letter-spacing: 3px;
         color: #fff;
         padding-top: 3px;
+        @media (max-width: 767px) {
+            display: block;
+            &:first-child {
+                margin-bottom: 8px;
+            }
+        }
     }
 }
 
@@ -219,12 +225,12 @@ main::before {
 }
 
 .about-img:nth-of-type(4) {
-    right: 20%;
+    right: 15%;
     bottom: 28%;
 }
 
 .about-img:nth-of-type(5) {
-    right: 5%;
+    right: 0%;
     top: 10%;
 }
 
