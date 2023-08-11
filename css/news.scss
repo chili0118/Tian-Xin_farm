@@ -1,0 +1,114 @@
+#news {
+    background: #e8eee0;
+
+    &::before {
+        background: transparent;
+    }
+}
+
+.news-banner {
+    .news-banner-img {
+        height: 800px;
+        width: 100%;
+        background: url('../img/news.png') no-repeat center / cover;
+        @media (max-width: 767px) {
+            height: 350px;
+        }
+    }
+
+    .news-banner-text {
+        max-width: 1320px;
+        margin: 60px auto;
+        padding-left: 12px;
+        padding-right: 12px;
+
+        h2 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+
+            @media (max-width: 767px) {
+                font-size: 1.5rem;
+            }
+            span {
+                color: #519328;
+                display: inline-block;
+                margin-left: 12px;
+            }
+        }
+        p {
+            margin-top: 20px;
+            @media (max-width: 767px) {
+                margin-top: 12px;
+            }
+        }
+    }
+}
+
+.news-page {
+    display: flex;
+    margin: 0 auto;
+    max-width: 1320px;
+    padding: 80px 12px;
+    flex-wrap: wrap;
+    gap: 24px;
+    background: #e8eee0;
+
+    @media (max-width: 992px) {
+        flex-wrap: wrap;
+    }
+
+    li {
+        width: calc((100% - 48px) / 3);
+        border: 2px solid #fff;
+        padding: 12px;
+        border-radius: 15px;
+        overflow: hidden;
+
+        @media (max-width: 992px) {
+            width: calc((100% - 24px) / 2);
+        }
+
+        @media (max-width: 767px) {
+            width: 100%;
+        }
+
+        .news-page-img {
+            border-radius: 10px;
+            overflow: hidden;
+
+            &:hover img {
+                transform: scale(1.1);
+                filter: brightness(1.2);
+            }
+
+            img {
+                border-radius: 10px;
+                height: 280px;
+                width: 100%;
+                object-fit: cover;
+                transition: .5s ease;
+
+                @media (max-width: 767px) {
+                    height: 220px;
+                }
+            }
+        }
+
+        h3 {
+            font-size: 1.25rem;
+            font-weight: 500;
+            min-height: 80px;
+            padding: 12px 0;
+            color: #333;
+            letter-spacing: 1px;
+        }
+
+        time {
+            font-size: 0.875rem;
+            padding: 12px 0;
+            color: #555;
+            letter-spacing: 1px;
+        }
+    }
+}
